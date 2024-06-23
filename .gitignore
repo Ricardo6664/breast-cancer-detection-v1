@@ -1,0 +1,9 @@
+# Images Extension
+*.jpg
+*.png
+*.dcm
+*.dicom
+
+# Database
+db.sqlite3
+
