@@ -7,3 +7,28 @@
 # Database
 db.sqlite3
 
+/breast_cancer_detection_system/static/
+/breast_cancer_detection_system/media/
+/breast_cancer_detection_system/project/local_settings.py
+gunicorn-error-log
+__localcode
+/data/
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__
+*.pyo
+
+# Backupt files #
+*.bak
+
+# if you are using Pycharm
+.idea
+*.iml
+*.ipynb
+*.pyc
+*.pyo
+*.pyd
+
