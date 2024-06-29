@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.11'
 
 services:
   breast_cancer_detection:
@@ -9,7 +9,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./breast_cancer_detection_system:/breast_cancer_detection
+      - ../breast_cancer_detection_system:/breast_cancer_detection_system
       - ./data/web/static:/data/web/static/
       - ./data/web/media:/data/web/media
     env_file:

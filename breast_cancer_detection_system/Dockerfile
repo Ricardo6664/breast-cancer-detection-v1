@@ -11,7 +11,8 @@ COPY ./scripts /scripts
 RUN apk update && \
     apk add --no-cache openssh-client && \
     python -m pip install --upgrade pip && \
-    pip install virtualenv
+    pip install virtualenv && \
+    pip install django
 
 WORKDIR /breast_cancer_detection_system
 
@@ -23,10 +24,9 @@ RUN python -m venv /venv && \
 
 RUN addgroup -S dgroup && \
     adduser -S -G dgroup duser && \
-    mkdir -p /data/web/static && \
-    mkdir -p /data/web/media && \
-    chown -R duser:dgroup /venv /data/web/static /data/web/media && \
-    chmod -R 755 /data/web/static /data/web/media && \
+    mkdir -p /data/web/static /data/web/media /breast_cancer_detection_system/users /data/web/static/admin && \
+    chown -R duser:dgroup /venv /data/web /breast_cancer_detection_system && \
+    chmod -R 755 /data/web /breast_cancer_detection_system && \
     chmod -R +x /scripts
 
 ENV PATH="/scripts:/venv/bin:$PATH"
