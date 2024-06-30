@@ -3,6 +3,7 @@
 *.png
 *.dcm
 *.dicom
+*.jpeg
 
 # Database
 db.sqlite3
@@ -13,6 +14,9 @@ db.sqlite3
 gunicorn-error-log
 __localcode
 /data/
+
+#dotenv
+.env
 
 # Django
 *.log
