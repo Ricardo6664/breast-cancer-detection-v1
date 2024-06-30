@@ -18,6 +18,8 @@ __localcode
 #dotenv
 .env
 
+# Virtual Enviroment
+/env
 # Django
 *.log
 *.pot
