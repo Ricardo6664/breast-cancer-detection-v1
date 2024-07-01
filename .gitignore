@@ -8,8 +8,6 @@
 # Database
 db.sqlite3
 
-/breast_cancer_detection_system/static/
-/breast_cancer_detection_system/media/
 /breast_cancer_detection_system/project/local_settings.py
 gunicorn-error-log
 __localcode
