@@ -1,8 +1,8 @@
 version: '3.11'
 
 services:
-  breast_cancer_detection:
-    container_name: breast_cancer_detection
+  breast_cancer_detection_system:
+    container_name: breast_cancer_detection_system
     build:
       context: .
       dockerfile: ./Dockerfile
