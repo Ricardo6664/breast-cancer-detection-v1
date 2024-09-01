@@ -6,17 +6,16 @@
 {% endblock %}
 
 {% block content %}
-  <div class="row">
-    <div class="col-md-4 mx-auto">
-      <h3>Autenticação</h3>
-
+  <div id="form_login">
+    <div  id = "content-form">
+      <h3>Welcome to System Detection</h3>
       <hr />
       <form action="" method="POST">
         {% csrf_token %}
 
         {{ form }}
 
-        <button type="submit" class="btn btn-light mt-3">Entrar</button>
+        <button type="submit" class="">Entrar</button>
       </form>
     </div>
   </div>

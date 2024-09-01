@@ -1,3 +1,21 @@
 body {
-    background-color: red;
+    background-color: rgb(206, 206, 206);
+    padding: 0;
+    margin: 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#form_login{
+    width: 30%;
+    height: 20%;
+    min-width: 600px;
+    margin: 200px auto;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#content-form h3{
+    text-align: center;
+    font-size: 34px;
 }
