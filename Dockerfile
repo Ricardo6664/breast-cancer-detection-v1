@@ -29,6 +29,7 @@ RUN addgroup -S dgroup && \
     chmod -R 777 /data/ /breast_cancer_detection_system && \
     chmod -R +x /scripts
 
+
 ENV PATH="/scripts:/venv/bin:$PATH"
 
 USER duser
