@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'storages',
     'user_management',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -129,11 +130,12 @@ USE_TZ = True
 """CONFIGURE AWS KEYS FOR COMMIT AND PUSH IN GITHUB REPOSITORY"""
 USE_S3 = os.getenv('USE_S3') == 'TRUE'
 # AWS settings
-AWS_ACCESS_KEY_ID =  os.getenv('AWS_ACCESS_KEY_ID', 'change-me'),
-AWS_SECRET_ACCESS_KEY =  os.getenv('AWS_SECRET_ACCESS_KEY', 'change-me'),
+AWS_ACCESS_KEY_ID =  os.getenv('AWS_ACCESS_KEY_ID', 'chang')
+AWS_SECRET_ACCESS_KEY =  os.getenv('AWS_SECRET_ACCESS_KEY', 'change-me')
 
 # Basic Storage configuration for Amazon S3 (Irrespective of Django)
-AWS_STORAGE_BUCKET_NAME =  os.getenv('AWS_STORAGE_BUCKET_NAME', 'change-me'),
+AWS_STORAGE_BUCKET_NAME =  os.getenv('AWS_STORAGE_BUCKET_NAME', 'change-me')
+
 AWS_S3_CUSTOM_DOMAIN = f'%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_FILE_OVERWRITE = False
 
@@ -169,6 +171,6 @@ MEDIA_ROOT = DATA_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Authentication Configuration
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL= 'login'
 LOGIN_URL = 'login'

@@ -1,0 +1,23 @@
+{% extends 'user_management/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block content %}
+<div id="form_login">
+  <div id="content-form">
+    <h3>Welcome to System Detection</h3>
+    <hr />
+    <form action="{% url 'user_management:login' %}" method="POST">
+      {% csrf_token %}
+      <input type="text" placeholder="Username..." name="username">
+      <br>
+      <input type="password" placeholder="Password" name="password">
+      <br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</div>
+{% endblock %}
