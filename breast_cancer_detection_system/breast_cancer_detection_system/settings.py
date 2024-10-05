@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
     'user_management',
 ]
 
@@ -124,6 +125,31 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+"""CONFIGURE AWS KEYS FOR COMMIT AND PUSH IN GITHUB REPOSITORY"""
+USE_S3 = os.getenv('USE_S3') == 'TRUE'
+# AWS settings
+AWS_ACCESS_KEY_ID =  os.getenv('AWS_ACCESS_KEY_ID', 'change-me'),
+AWS_SECRET_ACCESS_KEY =  os.getenv('AWS_SECRET_ACCESS_KEY', 'change-me'),
+
+# Basic Storage configuration for Amazon S3 (Irrespective of Django)
+AWS_STORAGE_BUCKET_NAME =  os.getenv('AWS_STORAGE_BUCKET_NAME', 'change-me'),
+AWS_S3_CUSTOM_DOMAIN = f'%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_FILE_OVERWRITE = False
+
+    # s3 static settings
+STORAGES = {
+    # media file (image) management
+    "default":{
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+    },
+
+    # CSS and JS file management
+
+    "staticfiles":{
+        "BACKEND":  "storages.backends.s3boto3.S3StaticStorage",
+    },
+}
 
 STATIC_URL = 'static/'
 # /data/web/static
