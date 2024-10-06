@@ -11,10 +11,13 @@ def register(request):
         password = request.POST.get('password')
 
         user = User.objects.filter(username=username).first()
+        email = User.objects.filter(email=email).first()
 
         if user:
             return HttpResponse("User already exists")
 
+        if email:
+            return HttpResponse("Email already exists")
         user = User.objects.create_user(username=username, email=email, password=password)
         user.save()
 
