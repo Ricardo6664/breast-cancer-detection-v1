@@ -141,10 +141,10 @@ AWS_S3_CUSTOM_DOMAIN = f'%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_FILE_OVERWRITE = False
 
     # s3 static settings
-STORAGES = {
+DEFAULT_FILE_STORAGE = {
     # media file (image) management
     "default":{
-        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+        "BACKEND": "storages.backends.s3boto3.S3Storage",
     },
 
     # CSS and JS file management
@@ -152,6 +152,7 @@ STORAGES = {
     "staticfiles":{
         "BACKEND":  "storages.backends.s3boto3.S3StaticStorage",
     },
+
 }
 
 STATIC_URL = 'static/'
@@ -164,7 +165,7 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = 'media/'
 # /data/web/media
-MEDIA_ROOT = DATA_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

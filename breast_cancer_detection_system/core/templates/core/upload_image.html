@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Upload</title>
+{% endblock title%}
+
+{% block content %}
+<h1>Upload Image</h1>
+<form action="{%url 'core:image_save' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token%}
+    <label for="img">Select image:</label>
+    <input type="file" id="img" name="img" accept="image/*">
+    <button type="submit" value="send">Upload</button>
+</form>
+{% endblock content%}
