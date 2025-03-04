@@ -1,38 +1,182 @@
-# Images Extension
-*.jpg
-*.png
-*.dcm
-*.dicom
-*.jpeg
-
-# Database
-db.sqlite3
-
-/breast_cancer_detection_system/project/local_settings.py
-gunicorn-error-log
-__localcode
-/data/
-
-#dotenv
-.env
-
-# Virtual Enviroment
-/env
-# Django
+# Arquivos de sistema e ambientes
+.DS_Store
+Thumbs.db
+ehthumbs.db
 *.log
-*.pot
-*.pyc
-__pycache__
-*.pyo
-
-# Backupt files #
+*.lock
+*.tmp
 *.bak
+*.swp
+*.swo
+*.swn
+*.~*
 
-# if you are using Pycharm
-.idea
+# Diretórios de build e dependências
+/node_modules
+/.pnp
+.pnp.js
+/build
+/dist
+/out
+/target
+/.next
+/.nuxt
+/.vercel
+/.serverless
+/.venv
+/env
+/venv
+/.cache
+/.pytest_cache
+/__pycache__
+
+# Logs e relatórios
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Arquivos de pacotes e compilados
+*.class
+*.dll
+*.exe
+*.so
+*.dylib
+*.pyc
+*.pyo
+*.o
+*.obj
+*.a
+*.lib
+*.lo
+*.la
+*.jar
+*.war
+*.ear
+*.min.js
+*.map
+
+# Configurações de IDEs e editores
+.vscode/
+.idea/
 *.iml
-*.ipynb
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.code-workspace
+
+# Arquivos de controle de versões internos de IDEs
+/.vscode
+/.vscode-test
+/.vscode-server
+
+# Configurações específicas de linguagens
+
+## Python
 *.pyc
 *.pyo
 *.pyd
+__pycache__/
 
+## C/C++
+*.obj
+*.exe
+*.out
+*.app
+*.dSYM/
+
+## Java
+*.class
+*.jar
+*.war
+*.ear
+*.jpf
+
+## C#
+/bin/
+/obj/
+/packages/
+/TestResults/
+/.vs/
+
+## Node.js
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+
+## Go
+/go/bin/
+/go/pkg/
+/go/src/
+
+## PHP
+/vendor/
+
+## Rust
+/target/
+
+# Configurações de Docker
+*.env
+.env.local
+.env.*.local
+.envrc
+
+# Arquivos de banco de dados e dumps
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+*.accdb
+
+# Arquivos de imagens, cache ou assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tiff
+*.ico
+*.svg
+*.bmp
+*.webp
+
+# Arquivos de backup ou temporários
+*.bak
+*.old
+*.swp
+*.swo
+*.tmp
+*.temp
+*.log
+
+# Certificados e chaves privadas (nunca versionar!)
+*.pem
+*.crt
+*.key
+
+# Arquivos de deploy (AWS, Terraform, etc.)
+/.terraform
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Ignorar arquivos de teste ou debugging
+*.coverage
+*.lcov
+.nyc_output
+coverage/
+
+# Arquivos específicos de serviços (ex: Heroku, Netlify)
+/.netlify
+/netlify.toml
+
+# Arquivos de configuração pessoal ou de usuário
+*.local
+*.env
+*.secret
+*.keystore
+*.jks
