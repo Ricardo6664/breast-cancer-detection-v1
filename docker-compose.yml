@@ -6,12 +6,12 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-
     ports:
       - 8000:8000
     volumes:
       - ./breast_cancer_detection_system:/breast_cancer_detection_system
-
+      - ./data/web/static:/data/static/
+      - ./data/web/media:/data/media/
     env_file:
     - ./dotenv_files/.env
     depends_on:
@@ -20,6 +20,6 @@ services:
     container_name: psql
     image: postgres:13-alpine
     volumes:
-      - ./data/postgres:/var/lib/postgresql/data
+      - ./data/postgres/data:/var/lib/postgresql/data
     env_file:
       - ./dotenv_files/.env

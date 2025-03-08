@@ -1,0 +1,4 @@
+Django>=5.1.7, < 5.2
+psycopg2-binary
+boto3
+django-storages>=1.14.5,< 1.15
