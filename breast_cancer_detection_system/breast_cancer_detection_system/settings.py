@@ -155,7 +155,7 @@ DEFAULT_FILE_STORAGE = {
 
 }
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 # /data/web/static
 STATIC_ROOT = DATA_DIR / 'static'
 
@@ -163,7 +163,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 # /data/web/media
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
@@ -176,11 +176,3 @@ DEFAULT_FROM_EMAIL = 'ricardosantos130100@gmail.com'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL= 'login'
 LOGIN_URL = 'login'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_HOST_USER=os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD=os.getenv('EMAIL_HOST_PASSWORD')
-EMAIL_HOST=os.getenv('EMAIL_HOST')
-EMAIL_PORT=int(os.getenv('EMAIL_PORT'))
-EMAIL_USE_TLS=os.getenv('EMAIL_USE_TLS')

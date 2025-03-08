@@ -4,7 +4,7 @@ set -e
 
 while ! nc -z $POSTGRES_HOST $POSTGRES_PORT; do
 echo "Waiting for Postegres Database Startup ($POSTGRES_NOT $POSTGRES_PORT)..."
-sleep 2
+sleep 0.1
 done
 
 echo "Postegres Database Started Successfully ($POSTGRES_HOST:$POSTGRES_PORT)"
